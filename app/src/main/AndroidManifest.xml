@@ -15,6 +15,8 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true">
+            android:name=".IntroActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
