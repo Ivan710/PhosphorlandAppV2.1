@@ -30,6 +30,7 @@
         app:srcCompat="@drawable/logo" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/start_btn"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
