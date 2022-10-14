@@ -39,14 +39,14 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkCredentials();
-                /*if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
+                //checkCredentials();
+                if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
                     //correct
                     Toast.makeText(LoginActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(LoginActivity.this, OrderingActivity.class));
                 }else{
                     Toast.makeText(LoginActivity.this, "LOGIN FAILED", Toast.LENGTH_SHORT).show();
-                }*/
+                }
             }
         });
     }
