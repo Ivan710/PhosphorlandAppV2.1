@@ -13,7 +13,6 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
 
     EditText inputUsername, inputPassword;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //checkCredentials();
                 if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
                     //correct
                     Toast.makeText(LoginActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
@@ -58,6 +58,9 @@ public class LoginActivity extends AppCompatActivity {
         }
         else if (password.isEmpty() || password.length()<7){
             showError(inputPassword, "Your password must be at least 7 characters!");
+        }
+        else{
+            startActivity(new Intent(LoginActivity.this, OrderingActivity.class));
         }
     }
 
