@@ -46,7 +46,7 @@ public class RegisterActivity extends AppCompatActivity {
         String username=inputUsernameRegister.getText().toString();
         String email=inputEmailRegister.getText().toString();
         String password=inputPasswordRegister.getText().toString();
-        String passwordConfim=inputConfirmpassRegister.getText().toString();
+        String passwordConfirm=inputConfirmpassRegister.getText().toString();
 
         if (username.isEmpty() || username.length()<7){
             showError(inputUsernameRegister, "Your username is not valid!");
@@ -57,7 +57,7 @@ public class RegisterActivity extends AppCompatActivity {
         else if (password.isEmpty() || password.length()<7){
             showError(inputPasswordRegister, "Your password must be at least 7 characters!");
         }
-        else if (passwordConfim.isEmpty() || !passwordConfim.equals(password)){
+        else if (passwordConfirm.isEmpty() || !passwordConfirm.equals(password)){
             showError(inputConfirmpassRegister, "Your password does not match!");
         }
         else{
