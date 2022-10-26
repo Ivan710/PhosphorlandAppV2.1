@@ -16,7 +16,7 @@ import java.util.Collections;
 
 public class PickFramboesaActivity extends AppCompatActivity {
     TextView textView;
-    private ConstraintLayout layout;
+    private ConstraintLayout layout584;
     boolean[] selectedVariety;
     ArrayList<Integer> langList = new ArrayList<>();
     String[] langArray = {"Chadmor","Chemaines","Otávia", "Paris", "Polka","Tadmor","Tulameen"};
@@ -27,11 +27,11 @@ public class PickFramboesaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pick_mirtilo);
 
-        layout=findViewById(R.id.Layout);
-        layout.setOnClickListener(new View.OnClickListener() {
+        layout584=findViewById(R.id.Layout584);
+        layout584.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PickFramboesaActivity.this,OrderingActivity.class));
+                startActivity(new Intent(PickFramboesaActivity.this, OrderingActivity.class));
             }
         });
         // assign variable
