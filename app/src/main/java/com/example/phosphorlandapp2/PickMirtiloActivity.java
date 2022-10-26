@@ -1,26 +1,40 @@
 package com.example.phosphorlandapp2;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import java.util.ArrayList;
 import java.util.Collections;;
 
 public class PickMirtiloActivity extends AppCompatActivity {
+    private ConstraintLayout constraintLayout5555;
     TextView textView;
     boolean[] selectedVariety;
     ArrayList<Integer> langList = new ArrayList<>();
     String[] langArray = {"Aurora"," Bluecrop", "Bluejay", "Brigitta", "Camélia", "Chandler", "Darrow", "Draper", "Duke", "Eliot", "Reka", "Goldtraube", "Legacy", "Liberty", "Nelson", "O’Neal", "Ozarkblue", "Spartan", "Star"};
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pick_mirtilo);
+
+        constraintLayout5555=findViewById(R.id.ConstraintLayout);
+        constraintLayout5555.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PickMirtiloActivity.this, OrderingActivity.class));
+            }
+        });
+
         // assign variable
         textView = findViewById(R.id.textView);
 
