@@ -2,8 +2,11 @@ package com.example.phosphorlandapp2;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -13,14 +16,24 @@ import java.util.Collections;
 
 public class PickFramboesaActivity extends AppCompatActivity {
     TextView textView;
+    private ConstraintLayout layout;
     boolean[] selectedVariety;
     ArrayList<Integer> langList = new ArrayList<>();
     String[] langArray = {"Chadmor","Chemaines","Otávia", "Paris", "Polka","Tadmor","Tulameen"};
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pick_mirtilo);
+
+        layout=findViewById(R.id.Layout);
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PickFramboesaActivity.this,OrderingActivity.class));
+            }
+        });
         // assign variable
         textView = findViewById(R.id.textView);
 
