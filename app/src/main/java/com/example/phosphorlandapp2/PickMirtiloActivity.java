@@ -13,7 +13,7 @@ import java.util.Collections;;
 
 public class PickMirtiloActivity extends AppCompatActivity {
     TextView textView;
-    boolean[] selectedLanguage;
+    boolean[] selectedVariety;
     ArrayList<Integer> langList = new ArrayList<>();
     String[] langArray = {"Aurora"," Bluecrop", "Bluejay", "Brigitta", "Camélia", "Chandler", "Darrow", "Draper", "Duke", "Eliot", "Reka", "Goldtraube", "Legacy", "Liberty", "Nelson", "O’Neal", "Ozarkblue", "Spartan", "Star"};
 
@@ -25,7 +25,7 @@ public class PickMirtiloActivity extends AppCompatActivity {
         textView = findViewById(R.id.textView);
 
         // initialize selected language array
-        selectedLanguage = new boolean[langArray.length];
+        selectedVariety = new boolean[langArray.length];
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,12 +35,12 @@ public class PickMirtiloActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(PickMirtiloActivity.this);
 
                 // set title
-                builder.setTitle("Select Language");
+                builder.setTitle("Select Variety");
 
                 // set dialog non cancelable
                 builder.setCancelable(false);
 
-                builder.setMultiChoiceItems(langArray, selectedLanguage, new DialogInterface.OnMultiChoiceClickListener() {
+                builder.setMultiChoiceItems(langArray, selectedVariety, new DialogInterface.OnMultiChoiceClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i, boolean b) {
                         // check condition
@@ -91,9 +91,9 @@ public class PickMirtiloActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         // use for loop
-                        for (int j = 0; j < selectedLanguage.length; j++) {
+                        for (int j = 0; j < selectedVariety.length; j++) {
                             // remove all selection
-                            selectedLanguage[j] = false;
+                            selectedVariety[j] = false;
                             // clear language list
                             langList.clear();
                             // clear text view value
