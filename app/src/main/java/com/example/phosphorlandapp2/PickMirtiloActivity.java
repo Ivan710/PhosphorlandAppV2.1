@@ -27,6 +27,8 @@ public class PickMirtiloActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pick_mirtilo);
 
+
+
         constraintLayout5555=findViewById(R.id.ConstraintLayout);
         constraintLayout5555.setOnClickListener(new View.OnClickListener() {
             @Override
