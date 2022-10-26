@@ -18,7 +18,7 @@ private ConstraintLayout constraintLayout2;
         constraintLayout2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(OrderingActivity.this, ShowDetailActivity.class));
+                startActivity(new Intent(OrderingActivity.this, PickMirtiloActivity.class));
             }
         });
     }
