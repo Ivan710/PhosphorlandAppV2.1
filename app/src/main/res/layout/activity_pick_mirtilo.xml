@@ -158,6 +158,7 @@
             android:background="@drawable/green_button"
             android:text="Finish"
             android:textSize="25sp"
+            android:onClick="finishButton"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

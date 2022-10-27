@@ -20,6 +20,8 @@ import java.util.Collections;;
 
 public class PickMirtiloActivity extends AppCompatActivity {
     private ConstraintLayout constraintLayout5555;
+    Boolean isPickUp;
+    Boolean isDelivery;
     TextView textView;
     boolean[] selectedVariety;
     ArrayList<Integer> langList = new ArrayList<>();
@@ -158,13 +160,23 @@ public class PickMirtiloActivity extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.radio_pirates:
                 if (checked)
-                    // Pirates are the best
+                    isPickUp=true;
+                    isDelivery=false;
                     break;
             case R.id.radio_ninjas:
                 if (checked)
-                    // Ninjas rule
+                    isPickUp=false;
+                    isDelivery=true;
                     break;
         }
+    }
+    public void finishButton(View view)
+    {
+        if (isPickUp && minteger>0)
+            startActivity(new Intent(PickMirtiloActivity.this, PickUpActivity.class));
+        if (isDelivery && minteger>0)
+            startActivity((new Intent(PickMirtiloActivity.this, DeliveryActivity.class)));
+
     }
 
 }

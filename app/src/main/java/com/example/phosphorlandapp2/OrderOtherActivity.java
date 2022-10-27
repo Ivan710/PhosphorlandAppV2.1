@@ -52,6 +52,7 @@ public class OrderOtherActivity extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.radio_pirates:
                 if (checked)
+
                     break;
             case R.id.radio_ninjas:
                 if (checked)
