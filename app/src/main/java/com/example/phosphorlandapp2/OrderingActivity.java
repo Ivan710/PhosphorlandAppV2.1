@@ -32,19 +32,5 @@ private ConstraintLayout constraintLayout4;
                 startActivity(new Intent(OrderingActivity.this, PickFramboesaActivity.class));
             }
         });
-        constraintLayout11=findViewById(R.id.constraintLayout11);
-        constraintLayout11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                constraintLayout11.setBackgroundColor(Color.GRAY);
-            }
-        });
-        constraintLayout12=findViewById(R.id.constraintLayout12);
-        constraintLayout12.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                constraintLayout12.setBackgroundColor(Color.GRAY);
-            }
-        });
     }
 }
