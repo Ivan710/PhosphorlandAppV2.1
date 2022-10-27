@@ -63,7 +63,8 @@
             app:layout_constraintBottom_toTopOf="@+id/ConstraintLayout"
             app:layout_constraintEnd_toStartOf="@+id/ConstraintLayout"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical">
 
             <RadioButton
                 android:id="@+id/radioButton"
