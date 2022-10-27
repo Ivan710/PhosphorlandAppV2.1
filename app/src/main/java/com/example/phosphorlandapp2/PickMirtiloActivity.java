@@ -133,14 +133,14 @@ public class PickMirtiloActivity extends AppCompatActivity {
 
     }public void decreaseInteger(View view) {
         minteger = minteger - 1;
+        if (minteger <= 0)
+            minteger = 0;
         display(minteger);
     }
 
     private void display(int number) {
         TextView displayInteger = (TextView) findViewById(
                 R.id.integer_number);
-        if (minteger < 0)
-            minteger = 0;
         displayInteger.setText("" + number + "kg");
     }
     public void onRadioButtonClicked(View view) {
