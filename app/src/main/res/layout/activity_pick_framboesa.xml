@@ -9,16 +9,27 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp">
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Deliver Framboesa"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.13" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/Layout584"
+            android:id="@+id/ConstraintLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="16dp">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -33,75 +44,76 @@
                 app:layout_constraintVertical_bias="0.01999998"
                 app:srcCompat="?attr/actionModeCloseDrawable" />
 
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                tools:context=".MainActivity">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="false"
+                    android:layout_marginTop="200dp"
+                    android:background="@drawable/green_button"
+                    android:drawableRight="@android:drawable/arrow_down_float"
+                    android:drawablePadding="16dp"
+                    android:hint="Pick Variety"
+                    android:padding="12dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp"
-            tools:context=".MainActivity">
-
-            <!-- text view to display selected items-->
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="false"
-                android:layout_centerHorizontal="false"
-                android:layout_marginTop="100dp"
-                android:background="@drawable/green_button"
-                android:drawableRight="@android:drawable/arrow_down_float"
-                android:drawablePadding="16dp"
-                android:hint="Pick Variety"
-                android:padding="12dp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
         <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
-            android:layout_height="96dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="400dp"
-            android:layout_marginTop="500dp"
-            app:layout_constraintBottom_toTopOf="@+id/Layout584"
-            app:layout_constraintEnd_toStartOf="@+id/Layout584"
+            android:layout_marginTop="700dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/ConstraintLayout"
+            app:layout_constraintEnd_toStartOf="@+id/ConstraintLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/radio_pirates"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pick Up"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/pirates"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:onClick="onRadioButtonClicked"/>
+                android:textStyle="bold" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radio_ninjas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="200dp"
                 android:layout_marginTop="-50dp"
-                android:text="Delivery"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/ninjas"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:onClick="onRadioButtonClicked"/>
+                android:textStyle="bold" />
         </RadioGroup>
-            <TextView
-                android:id="@+id/integer_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0 kg"
-                android:textColor="@color/black"
-                android:textSize="35sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.65" />
 
+        <TextView
+            android:id="@+id/integer_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0 kg"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.65" />
 
         <Button
             android:id="@+id/increase"
@@ -131,7 +143,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.65" />
 
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:background="@drawable/green_button"
+            android:text="Deliver"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.88" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
