@@ -21,6 +21,7 @@ public class PickFramboesaActivity extends AppCompatActivity {
     boolean[] selectedVariety;
     ArrayList<Integer> langList = new ArrayList<>();
     String[] langArray = {"Chadmor", "Chemaines", "Otávia", "Paris", "Polka", "Tadmor", "Tulameen"};
+    int minteger = 0;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -121,6 +122,21 @@ public class PickFramboesaActivity extends AppCompatActivity {
         });
     }
 
+    public void increaseInteger(View view) {
+        minteger = minteger + 1;
+        display(minteger);
+
+    }public void decreaseInteger(View view) {
+        minteger = minteger - 1;
+        if (minteger <= 0)
+            minteger = 0;
+        display(minteger);
+    }
+    private void display(int number) {
+        TextView displayInteger = (TextView) findViewById(
+                R.id.integer_number);
+        displayInteger.setText("" + number + " kg");
+    }
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
