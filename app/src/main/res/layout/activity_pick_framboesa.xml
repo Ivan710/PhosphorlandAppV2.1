@@ -88,6 +88,49 @@
                 android:textStyle="bold"
                 android:onClick="onRadioButtonClicked"/>
         </RadioGroup>
+            <TextView
+                android:id="@+id/integer_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 kg"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.65" />
+
+
+        <Button
+            android:id="@+id/increase"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/plus"
+            android:onClick="increaseInteger"
+            android:text="I"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.65" />
+
+        <Button
+            android:id="@+id/decrease"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/minus"
+            android:onClick="decreaseInteger"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.65" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
