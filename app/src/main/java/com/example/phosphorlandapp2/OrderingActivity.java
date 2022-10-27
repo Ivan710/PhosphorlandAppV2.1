@@ -13,7 +13,10 @@ private ConstraintLayout constraintLayout2;
 private ConstraintLayout constraintLayout11;
 private ConstraintLayout constraintLayout12;
 private ConstraintLayout constraintLayout4;
-    private ConstraintLayout constraintLayout3;
+private ConstraintLayout constraintLayout5;
+private ConstraintLayout constraintLayout3;
+private ConstraintLayout constraintLayout7;
+private ConstraintLayout constraintLayout6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +42,31 @@ private ConstraintLayout constraintLayout4;
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(OrderingActivity.this, OrderOtherActivity.class));
-                OrderOtherActivity.title="Order Amora";
-
+                OrderOtherActivity.tekst="Deliver Amora";
+            }
+        });
+        constraintLayout5=findViewById(R.id.constraintLayout5);
+        constraintLayout5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OrderingActivity.this, OrderOtherActivity.class));
+                OrderOtherActivity.tekst="Deliver Groselha";
+            }
+        });
+        constraintLayout6=findViewById(R.id.constraintLayout6);
+        constraintLayout6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OrderingActivity.this, OrderOtherActivity.class));
+                OrderOtherActivity.tekst="Deliver Morango";
+            }
+        });
+        constraintLayout7=findViewById(R.id.constraintLayout7);
+        constraintLayout7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OrderingActivity.this, OrderOtherActivity.class));
+                OrderOtherActivity.tekst="Deliver Goji";
             }
         });
     }
