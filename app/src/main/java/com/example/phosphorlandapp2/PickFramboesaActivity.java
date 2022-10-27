@@ -28,7 +28,7 @@ public class PickFramboesaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pick_framboesa);
 
-        layout584 = findViewById(R.id.Layout584);
+        layout584 = findViewById(R.id.ConstraintLayout);
         layout584.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
