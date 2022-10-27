@@ -13,6 +13,7 @@ public class OrderOtherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_other);
 
+
         textView=(TextView)findViewById(R.id.title);
         textView.setText(tekst);
     }
