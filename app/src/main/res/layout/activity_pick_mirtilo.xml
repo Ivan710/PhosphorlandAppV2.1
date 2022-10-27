@@ -45,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="false"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="200dp"
                 android:background="@drawable/green_button"
                 android:drawableRight="@android:drawable/arrow_down_float"
                 android:drawablePadding="16dp"
@@ -56,24 +56,25 @@
         </RelativeLayout>
 
         <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="400dp"
-            android:layout_marginTop="500dp"
+            android:layout_marginTop="700dp"
+            android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/ConstraintLayout"
             app:layout_constraintEnd_toStartOf="@+id/ConstraintLayout"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:orientation="vertical">
+            app:layout_constraintTop_toTopOf="parent">
 
             <RadioButton
                 android:id="@+id/radio_pirates"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/pirates"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:onClick="onRadioButtonClicked"/>
+                android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/radio_ninjas"
@@ -81,11 +82,51 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="200dp"
                 android:layout_marginTop="-50dp"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/ninjas"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:onClick="onRadioButtonClicked"/>
+                android:textStyle="bold" />
         </RadioGroup>
+
+        <TextView
+            android:id="@+id/integer_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 kg"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.65999997" />
+
+        <Button
+            android:id="@+id/increase"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/plus"
+            android:text="I"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.63" />
+
+        <Button
+            android:id="@+id/decrease"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/minus"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.7" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

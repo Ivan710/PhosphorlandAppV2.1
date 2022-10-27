@@ -23,6 +23,7 @@ public class PickMirtiloActivity extends AppCompatActivity {
     TextView textView;
     boolean[] selectedVariety;
     ArrayList<Integer> langList = new ArrayList<>();
+    int minteger = 0;
     String[] langArray = {"Aurora"," Bluecrop", "Bluejay", "Brigitta", "Camélia", "Chandler", "Darrow", "Draper", "Duke", "Eliot", "Reka", "Goldtraube", "Legacy", "Liberty", "Nelson", "O’Neal", "Ozarkblue", "Spartan", "Star"};
 
     @SuppressLint("MissingInflatedId")
@@ -123,6 +124,22 @@ public class PickMirtiloActivity extends AppCompatActivity {
                 builder.show();
             }
         });
+
+    }
+
+    public void increaseInteger(View view) {
+        minteger = minteger + 1;
+        display(minteger);
+
+    }public void decreaseInteger(View view) {
+        minteger = minteger - 1;
+        display(minteger);
+    }
+
+    private void display(int number) {
+        TextView displayInteger = (TextView) findViewById(
+                R.id.integer_number);
+        displayInteger.setText("" + number + "kg");
     }
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
@@ -140,5 +157,6 @@ public class PickMirtiloActivity extends AppCompatActivity {
                     break;
         }
     }
+
 }
 
