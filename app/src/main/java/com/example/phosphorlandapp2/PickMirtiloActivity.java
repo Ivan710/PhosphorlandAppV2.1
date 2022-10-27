@@ -41,13 +41,6 @@ public class PickMirtiloActivity extends AppCompatActivity {
                 startActivity(new Intent(PickMirtiloActivity.this, OrderingActivity.class));
             }
         });
-        Button button4=findViewById(R.id.button4);
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(PickMirtiloActivity.this, DeliveryActivity.class));
-            }
-        });
 
         // assign variable
         textView = findViewById(R.id.textView);
