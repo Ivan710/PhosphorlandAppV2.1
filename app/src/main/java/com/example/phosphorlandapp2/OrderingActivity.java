@@ -39,7 +39,7 @@ private ConstraintLayout constraintLayout4;
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(OrderingActivity.this, OrderOtherActivity.class));
-
+                OrderOtherActivity.tekst="Deliver Amora";
             }
         });
     }
