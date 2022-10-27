@@ -139,7 +139,7 @@ public class PickMirtiloActivity extends AppCompatActivity {
     private void display(int number) {
         TextView displayInteger = (TextView) findViewById(
                 R.id.integer_number);
-        if (minteger <= 0)
+        if (minteger < 0)
             minteger = 0;
         displayInteger.setText("" + number + "kg");
     }
