@@ -13,6 +13,7 @@ private ConstraintLayout constraintLayout2;
 private ConstraintLayout constraintLayout11;
 private ConstraintLayout constraintLayout12;
 private ConstraintLayout constraintLayout4;
+    private ConstraintLayout constraintLayout3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,16 @@ private ConstraintLayout constraintLayout4;
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(OrderingActivity.this, PickFramboesaActivity.class));
+
+            }
+        });
+        constraintLayout3=findViewById(R.id.constraintLayout3);
+        constraintLayout3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OrderingActivity.this, OrderOtherActivity.class));
+                OrderOtherActivity.title="Order Amora";
+
             }
         });
     }
