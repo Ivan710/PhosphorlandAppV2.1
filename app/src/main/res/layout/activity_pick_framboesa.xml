@@ -32,6 +32,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.01999998"
                 app:srcCompat="?attr/actionModeCloseDrawable" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <RelativeLayout
@@ -56,6 +57,38 @@
                 android:textStyle="bold" />
 
         </RelativeLayout>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:layout_marginStart="400dp"
+            android:layout_marginTop="500dp"
+            app:layout_constraintBottom_toTopOf="@+id/Layout584"
+            app:layout_constraintEnd_toStartOf="@+id/Layout584"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick Up"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="-50dp"
+                android:text="Delivery"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ public class PickFramboesaActivity extends AppCompatActivity {
     private ConstraintLayout layout584;
     boolean[] selectedVariety;
     ArrayList<Integer> langList = new ArrayList<>();
-    String[] langArray = {"Chadmor","Chemaines","Otávia", "Paris", "Polka","Tadmor","Tulameen"};
+    String[] langArray = {"Chadmor", "Chemaines", "Otávia", "Paris", "Polka", "Tadmor", "Tulameen"};
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -27,7 +28,7 @@ public class PickFramboesaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pick_framboesa);
 
-        layout584=findViewById(R.id.Layout584);
+        layout584 = findViewById(R.id.Layout584);
         layout584.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,5 +119,22 @@ public class PickFramboesaActivity extends AppCompatActivity {
                 builder.show();
             }
         });
+    }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.radio_pirates:
+                if (checked)
+                    // Pirates are the best
+                    break;
+            case R.id.radio_ninjas:
+                if (checked)
+                    // Ninjas rule
+                    break;
+        }
     }
 }
