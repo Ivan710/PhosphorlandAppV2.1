@@ -141,7 +141,7 @@ public class PickMirtiloActivity extends AppCompatActivity {
     private void display(int number) {
         TextView displayInteger = (TextView) findViewById(
                 R.id.integer_number);
-        displayInteger.setText("" + number + "kg");
+        displayInteger.setText("" + number + " kg");
     }
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
