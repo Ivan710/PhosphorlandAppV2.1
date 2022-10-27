@@ -13,6 +13,8 @@ public class OrderOtherActivity extends AppCompatActivity {
     TextView textView;
     private ConstraintLayout constraintLayout5555;
     public static String tekst;
+    Boolean isPickUp;
+    Boolean isDelivery;
     int minteger = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,5 +60,13 @@ public class OrderOtherActivity extends AppCompatActivity {
                 if (checked)
                     break;
         }
+    }
+    public void finishButton(View view)
+    {
+        if (isPickUp && minteger>0)
+            startActivity(new Intent(OrderOtherActivity.this, PickUpActivity.class));
+        if (isDelivery && minteger>0)
+            startActivity((new Intent(OrderOtherActivity.this, DeliveryActivity.class)));
+
     }
 }

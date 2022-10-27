@@ -19,6 +19,8 @@ public class PickFramboesaActivity extends AppCompatActivity {
     TextView textView;
     private ConstraintLayout layout584;
     boolean[] selectedVariety;
+    Boolean isPickUp;
+    Boolean isDelivery;
     ArrayList<Integer> langList = new ArrayList<>();
     String[] langArray = {"Chadmor", "Chemaines", "Otávia", "Paris", "Polka", "Tadmor", "Tulameen"};
     int minteger = 0;
@@ -152,5 +154,13 @@ public class PickFramboesaActivity extends AppCompatActivity {
                     // Ninjas rule
                     break;
         }
+    }
+    public void finishButton(View view)
+    {
+        if (isPickUp && minteger>0)
+            startActivity(new Intent(PickFramboesaActivity.this, PickUpActivity.class));
+        if (isDelivery && minteger>0)
+            startActivity((new Intent(PickFramboesaActivity.this, DeliveryActivity.class)));
+
     }
 }

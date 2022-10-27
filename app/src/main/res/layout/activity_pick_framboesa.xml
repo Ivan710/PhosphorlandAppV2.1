@@ -156,6 +156,7 @@
             android:layout_height="60dp"
             android:background="@drawable/green_button"
             android:text="Finish"
+            android:onClick="finishButton"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
