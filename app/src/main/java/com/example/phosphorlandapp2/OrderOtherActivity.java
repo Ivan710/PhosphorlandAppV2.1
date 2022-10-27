@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class OrderOtherActivity extends AppCompatActivity {
-    public static String title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
