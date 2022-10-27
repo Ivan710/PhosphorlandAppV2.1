@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Phosphorland</string>
+    <string name="ninjas">Delivery</string>
+    <string name="pirates">Pick Up</string>
 </resources>

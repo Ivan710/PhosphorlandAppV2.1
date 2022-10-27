@@ -67,21 +67,21 @@
             android:orientation="vertical">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/radio_pirates"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pick Up"
+                android:text="@string/pirates"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:onClick="onRadioButtonClicked"/>
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radio_ninjas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="200dp"
                 android:layout_marginTop="-50dp"
-                android:text="Delivery"
+                android:text="@string/ninjas"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:onClick="onRadioButtonClicked"/>
